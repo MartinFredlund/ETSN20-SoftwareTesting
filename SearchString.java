@@ -8,13 +8,13 @@ public class SearchString {
         String fileName;
         //Check that input is correct
         if(args.length == 2){ 
-            pattern = args[0].toLowerCase();
+            pattern = args[0];
             fileName = args[1];
             try {
                 Scanner sc = new Scanner(new File(fileName));
                 while(sc.hasNextLine()){
                     String nextLine = sc.nextLine();
-                    if(nextLine.toLowerCase().contains(pattern)){
+                    if(nextLine.contains(pattern)){
                         System.out.println(nextLine);
                     }
                     
